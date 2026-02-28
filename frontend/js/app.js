@@ -5,7 +5,7 @@ async function analyzePhoto() {
     formData.append('survey', JSON.stringify(userData.survey));
     formData.append('photo', userData.photo);
 
-    const response = await fetch('https://dermascan-backend-5u4m.onrender.com/analyze', {
+    const response = await fetch('https://dermascan-33ua.onrender.com/analyze', {
       method: 'POST',
       body: formData
     });
