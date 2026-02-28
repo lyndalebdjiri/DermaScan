@@ -4,8 +4,8 @@ AI-powered skin analysis app. Upload a selfie, get a personalized skin assessmen
 
 ## Live Demo
 
-- **App:** [dermascan.vercel.app](https://dermascan.vercel.app)
-- **API:** [dermascan-api.onrender.com](https://dermascan-api.onrender.com) 
+- **App:** [https://derma-scan.vercel.app](https://derma-scan.vercel.app)
+- **API:** [https://dermascan-cry3.onrender.com](https://dermascan-cry3.onrender.com)
 
 ## What It Does
 
