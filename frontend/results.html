@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DermaScan - Your Results</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/results.css" />
+</head>
+
+<body>
+  <nav>
+    <a class="logo" href="index.html">Derma<span>Scan</span></a>
+    <button class="nav-btn" onclick="window.location.href='scan.html'">New Scan</button>
+  </nav>
+
+  <section class="results-section">
+    <div class="results-header">
+      <h1 id="resultsTitle">Your Skin Analysis</h1>
+    </div>
+
+    <section class="summary-hero">
+      <div class="summary-photo-wrap" id="uploadedPhotoWrap">
+        <img id="uploadedPhoto" class="summary-photo" alt="Uploaded skin selfie" />
+      </div>
+
+      <div class="summary-content">
+        <p class="summary-label">SKIN SUMMARY</p>
+        <h2 class="summary-heading">Personalized analysis for your skin</h2>
+        <p class="summary-text" id="summary">Loading...</p>
+        <p class="summary-score"><span id="overallScore">--</span> <span class="score-denom">/100</span></p>
+      </div>
+    </section>
+
+    <div class="score-legend">
+      <p class="score-legend-label">What does your score mean?</p>
+      <div class="score-legend-rows">
+        <div class="score-legend-row" data-min="0" data-max="40">
+          <span class="score-legend-range">0 – 40</span>
+          <span class="score-legend-text">Your skin needs extra love right now, and gentle consistency will help restore balance.</span>
+        </div>
+        <div class="score-legend-row" data-min="41" data-max="60">
+          <span class="score-legend-range">41 – 60</span>
+          <span class="score-legend-text">You're on the right path, and small refinements will elevate your glow beautifully.</span>
+        </div>
+        <div class="score-legend-row" data-min="61" data-max="80">
+          <span class="score-legend-range">61 – 80</span>
+          <span class="score-legend-text">Your skin feels healthy and supported, with just a little room to shine more.</span>
+        </div>
+        <div class="score-legend-row" data-min="81" data-max="100">
+          <span class="score-legend-range">81 – 100</span>
+          <span class="score-legend-text">Your skin is radiant, balanced, and glowing in its most confident, natural state.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="breakdown-title">Your Skin Breakdown</h2>
+    <div class="metrics-grid">
+      <div class="metric-card" id="metricCardHydration">
+        <span class="metric-label">Hydration</span>
+        <div class="metric-bar">
+          <div class="metric-fill" id="hydrationBar"></div>
+        </div>
+        <span class="metric-value" id="hydrationVal">--</span>
+        <p class="metric-note" id="hydrationNote"></p>
+      </div>
+
+      <div class="metric-card" id="metricCardTexture">
+        <span class="metric-label">Texture</span>
+        <div class="metric-bar">
+          <div class="metric-fill" id="textureBar"></div>
+        </div>
+        <span class="metric-value" id="textureVal">--</span>
+        <p class="metric-note" id="textureNote"></p>
+      </div>
+
+      <div class="metric-card" id="metricCardDarkSpots">
+        <span class="metric-label">Dark Spots</span>
+        <div class="metric-bar">
+          <div class="metric-fill" id="darkSpotsBar"></div>
+        </div>
+        <span class="metric-value" id="darkSpotsVal">--</span>
+        <p class="metric-note" id="darkSpotsNote"></p>
+      </div>
+
+      <div class="metric-card" id="metricCardFineLines">
+        <span class="metric-label">Fine Lines</span>
+        <div class="metric-bar">
+          <div class="metric-fill" id="fineLinesBar"></div>
+        </div>
+        <span class="metric-value" id="fineLinesVal">--</span>
+        <p class="metric-note" id="fineLinesNote"></p>
+      </div>
+
+      <div class="metric-card" id="metricCardPores">
+        <span class="metric-label">Pores</span>
+        <div class="metric-bar">
+          <div class="metric-fill" id="poresBar"></div>
+        </div>
+        <span class="metric-value" id="poresVal">--</span>
+        <p class="metric-note" id="poresNote"></p>
+      </div>
+
+      <div class="metric-card" id="metricCardOilProduction">
+        <span class="metric-label">Oil Production</span>
+        <div class="metric-bar">
+          <div class="metric-fill" id="oilProductionBar"></div>
+        </div>
+        <span class="metric-value" id="oilProductionVal">--</span>
+        <p class="metric-note" id="oilProductionNote"></p>
+      </div>
+
+      <div class="metric-card" id="metricCardSensitivity">
+        <span class="metric-label">Sensitivity</span>
+        <div class="metric-bar">
+          <div class="metric-fill" id="sensitivityBar"></div>
+        </div>
+        <span class="metric-value" id="sensitivityVal">--</span>
+        <p class="metric-note" id="sensitivityNote"></p>
+      </div>
+
+      <div class="metric-card" id="metricCardPigmentation">
+        <span class="metric-label">Pigmentation</span>
+        <div class="metric-bar">
+          <div class="metric-fill" id="pigmentationBar"></div>
+        </div>
+        <span class="metric-value" id="pigmentationVal">--</span>
+        <p class="metric-note" id="pigmentationNote"></p>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h3>Detected Concerns</h3>
+      <div class="tags" id="concernsList"></div>
+    </div>
+
+    <div class="routines-grid">
+      <div class="section-card">
+        <h3>Ingredients to Use</h3>
+        <div class="tags" id="ingredientsList"></div>
+      </div>
+      <div class="section-card">
+        <h3>Ingredients to Avoid</h3>
+        <div class="tags avoid" id="avoidList"></div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h3>Recommended Products</h3>
+      <div class="products-grid" id="productsList"></div>
+    </div>
+
+    <div class="email-cta" id="emailCta">
+      <h3>Want your complete personalized skincare plan?</h3>
+      <p>Get your full routine with expert explanations, ingredient guide, lifestyle tips and more - delivered to your
+        inbox.</p>
+      <div class="email-form">
+        <input type="text" id="ctaName" placeholder="Your name" />
+        <input type="email" id="ctaEmail" placeholder="Your email address" />
+        <button onclick="sendEmailReport()">Send My Full Plan &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('xtlYI9HTZGx76at2X');</script>
+
+  <!-- Scripts --->
+  <script src="js/alert.js"></script>
+  <script src="js/email.js"></script>
+  <script src="js/results.js"></script>
+</body>
+
+</html>

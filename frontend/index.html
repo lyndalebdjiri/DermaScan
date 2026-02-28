@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DermaScan - Skin Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+
+<body>
+  <nav>
+    <a class="logo" href="index.html">Derma<span>Scan</span></a>
+    <button class="nav-btn" onclick="window.location.href='scan.html'">Start Free Scan</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Know Your Skin.<br />Transform Your Routine.</h1>
+      <p class="hero-sub">
+        Upload a selfie and get a complete skin assessment with a personalized care plan sent
+        directly to your inbox.
+      </p>
+      <button class="hero-btn" onclick="window.location.href='scan.html'">Start Free Scan &rarr;</button>
+    </div>
+
+    <div class="face-scan">
+      <div class="scan-circle"></div>
+      <img src="images/face model.png" class="scan-face" alt="Skin scan model" />
+      <div class="scan-line"></div>
+      <div class="scan-line-horizontal"></div>
+      <div class="scan-grid"></div>
+      <div class="analysis-link link-hydration"></div>
+      <div class="analysis-link link-texture"></div>
+      <div class="analysis-link link-darkspots"></div>
+      <div class="analysis-link link-freckles"></div>
+      <div class="analysis-point point-hydration"></div>
+      <div class="analysis-point point-texture"></div>
+      <div class="analysis-point point-darkspots"></div>
+      <div class="analysis-point point-freckles"></div>
+      <div class="metric top-left">Hydration <span>55%</span></div>
+      <div class="metric top-right">Texture <span>75%</span></div>
+      <div class="metric bottom-left">Dark Spots <span>40%</span></div>
+      <div class="metric bottom-right">Freckles <span>80%</span></div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <p class="section-tag">How It Works</p>
+    <h2>Three steps to better skin</h2>
+
+    <div class="steps-connector" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Define your skin goals</h3>
+        <p>Answer a short guided survey so your analysis starts with context.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Capture a clear skin scan</h3>
+        <p>Use one makeup-free selfie to let AI detect visible skin patterns fast.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Get your full plan by email</h3>
+        <p>See your skin scores instantly on screen and receive your detailed routine plan by email.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to discover your skin?</h2>
+    <p>Get your personalized skin report in under 2 minutes.</p>
+    <button class="hero-btn" onclick="window.location.href='scan.html'">Start Your Free Scan &rarr;</button>
+  </section>
+
+</body>
+
+</html>

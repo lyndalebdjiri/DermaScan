@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Your Scan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/scan.css" />
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav>
+    <a class="logo" href="index.html">Derma<span>Scan</span></a>
+    <button class="nav-btn" onclick="window.location.href='index.html'">Back to Home</button>
+  </nav>
+
+  <!-- scan section  -->
+  <section class="scan-section">
+    <div class="scan-container">
+
+      <!-- step01 : survey -->
+      <div class="form-step survey-step" id="step1">
+        <div class="survey-wrapper">
+
+          <h1 class="survey-title">Start Your Skin Analysis</h1>
+          <p class="survey-sub">A few quick questions before we scan your skin.</p>
+
+          <div class="survey-questions">
+
+            <!-- Question 1: Age -->
+            <div class="question active" data-question="age">
+              <h3 class="question-title">How old are you?</h3>
+              <div class="survey-options">
+                <button type="button" class="survey-option">Under 20</button>
+                <button type="button" class="survey-option">20 – 25</button>
+                <button type="button" class="survey-option">25 – 30</button>
+                <button type="button" class="survey-option">30 – 40</button>
+                <button type="button" class="survey-option">40+</button>
+              </div>
+            </div>
+
+            <!-- Question 2: Skin Feel -->
+            <div class="question" data-question="skinFeel">
+              <h3 class="question-title">How does your skin usually feel during the day?</h3>
+              <div class="survey-options">
+                <button type="button" class="survey-option">Tight & dry</button>
+                <button type="button" class="survey-option">Shiny or oily</button>
+                <button type="button" class="survey-option">Sometimes oily, sometimes dry</button>
+                <button type="button" class="survey-option">Comfortable & balanced</button>
+                <button type="button" class="survey-option">Sensitive or easily irritated</button>
+              </div>
+            </div>
+
+            <!-- Question 3: Main Concern -->
+            <div class="question" data-question="mainConcern">
+              <h3 class="question-title">What would you like to improve the most?</h3>
+              <div class="survey-options">
+                <button type="button" class="survey-option">Clear skin & breakouts</button>
+                <button type="button" class="survey-option">Dark spots & uneven tone</button>
+                <button type="button" class="survey-option">Dryness & dullness</button>
+                <button type="button" class="survey-option">Fine lines & firmness</button>
+                <button type="button" class="survey-option">Pores & redness</button>
+              </div>
+            </div>
+
+            <!-- Question 3b: Breakouts (conditional) -->
+            <div class="question" data-question="breakouts" id="breakoutQuestion">
+              <h3 class="question-title">How often do you get breakouts?</h3>
+              <div class="survey-options">
+                <button type="button" class="survey-option">Rarely</button>
+                <button type="button" class="survey-option">Around my period</button>
+                <button type="button" class="survey-option">Often</button>
+                <button type="button" class="survey-option">Painful deep pimples</button>
+                <button type="button" class="survey-option">Small bumps</button>
+              </div>
+            </div>
+
+            <!-- Question 4: Sensitivity -->
+            <div class="question" data-question="sensitivity">
+              <h3 class="question-title">Does your skin react easily to new products?</h3>
+              <div class="survey-options">
+                <button type="button" class="survey-option">Yes, very easily</button>
+                <button type="button" class="survey-option">Sometimes</button>
+                <button type="button" class="survey-option">Not really</button>
+              </div>
+            </div>
+
+            <!-- Question 5: Sunscreen -->
+            <div class="question" data-question="sunscreen">
+              <h3 class="question-title">Do you wear sunscreen daily?</h3>
+              <div class="survey-options">
+                <button type="button" class="survey-option">Yes, every day</button>
+                <button type="button" class="survey-option">Only when sunny</button>
+                <button type="button" class="survey-option">Rarely or never</button>
+              </div>
+            </div>
+
+            <!-- Question 6: Sleep -->
+            <div class="question" data-question="sleep">
+              <h3 class="question-title">How many hours do you sleep per night?</h3>
+              <div class="survey-options">
+                <button type="button" class="survey-option">Less than 5</button>
+                <button type="button" class="survey-option">5 – 7</button>
+                <button type="button" class="survey-option">7 – 9</button>
+                <button type="button" class="survey-option">More than 9</button>
+              </div>
+            </div>
+
+            <!-- Question 7: Stress -->
+            <div class="question" data-question="stress">
+              <h3 class="question-title">How would you describe your stress levels lately?</h3>
+              <div class="survey-options">
+                <button type="button" class="survey-option">Very calm & relaxed</button>
+                <button type="button" class="survey-option">Mildly stressed</button>
+                <button type="button" class="survey-option">Moderately stressed</button>
+                <button type="button" class="survey-option">Very stressed</button>
+                <button type="button" class="survey-option">Extremely overwhelmed</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- navigation buttons -->
+          <div class="survey-nav">
+            <button type="button" class="survey-back" id="surveyBackBtn">← Back</button>
+            <button type="button" class="survey-next" id="surveyNextBtn">Continue</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- step02: photo upload-->
+      <div class="form-step" id="step2" style="display:none">
+
+        <div class="upload-header">
+          <h1 class="survey-title">Upload Your Selfie</h1>
+          <p class="survey-sub">No makeup, good lighting, straight-on angle works best.</p>
+        </div>
+
+        <!-- Upload area -->
+        <div class="upload-area" id="uploadArea" onclick="document.getElementById('photoInput').click()">
+          <div class="upload-icon">[◉°]</div>
+          <p>Click to upload your photo</p>
+          <span>JPG or PNG recommended</span>
+        </div>
+
+        <input type="file" id="photoInput" accept="image/*" style="display:none" onchange="previewPhoto(event)" />
+
+        <!-- Photo preview -->
+        <div class="photo-preview-wrapper" id="photoPreviewWrapper">
+          <div class="preview-circle">
+            <img id="photoPreview" class="photo-preview" />
+          </div>
+          <button class="change-photo-btn" onclick="document.getElementById('photoInput').click()">
+            Change Photo
+          </button>
+        </div>
+
+        <!-- navigation -->
+        <div class="upload-nav">
+          <button class="survey-back" onclick="backToSurvey()">← Back</button>
+          <button class="hero-btn" onclick="goToStep3()">Start My Skin Analysis</button>
+        </div>
+
+      </div>
+
+      <!-- step03: analyzing -->
+      <div class="analyzing-overlay" id="analyzingOverlay">
+        <div class="analyzing-box">
+          <div class="analyzing-pulse"></div>
+          <h2 class="analyzing-title">Reading your skin...</h2>
+          <p class="analyzing-sub">We’re analyzing your photo to create your personalized skin report. This will only take a moment.</p>
+          <div class="analyzing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- custom alert -->
+  <div class="custom-alert" id="customAlert">
+    <div class="custom-alert-box">
+      <p id="customAlertMessage">Please select an option before continuing.</p>
+      <button onclick="closeAlert()">OK</button>
+    </div>
+  </div>
+
+  <script src="js/alert.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
